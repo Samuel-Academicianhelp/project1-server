@@ -56,7 +56,7 @@ const resetLink = async (reciever, link, mailID) => {
     "Messages":[
       {
         "From": {
-          "Email": "adielesamuel@gmail.com",
+          "Email": "samuel.adiele@academicianhelp.com",
           "Name": "Samuel"
         },
         "To": [
