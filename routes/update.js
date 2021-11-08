@@ -9,7 +9,7 @@ router.use(express.static('client'));
 router.use(express.json());
 
 router.put('/fields/:field/:value/:email', async (req, res) => {
-    const ck = cookie.parse(req.headers.cookie || {});
+    const ck = cookie.parse(req.headers.cookie || '{}');
     const Users = config(req.hostname);
 
     if (ck.hasOwnProperty('user')) {
