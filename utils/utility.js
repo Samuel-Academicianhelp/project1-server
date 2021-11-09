@@ -78,7 +78,7 @@ const resetLink = async (reciever, link, mailID) => {
   })
   request
     .then((result) => {
-      console.log(result.body);
+      //console.log(result.body);
       return true;
     })
     .catch((err) => {

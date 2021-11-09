@@ -28,11 +28,8 @@ router.post('/email', async (req, res) => {
 
     // Send password reset link
     const mail = await resetLink(email, link, uuidv4());
-    if (mail) {
-        res.json({ status: true });
-    } else {
-        res.json({ status: false });
-    }
+    
+    await res.json({ status: true });
 });
 
 module.exports = router;

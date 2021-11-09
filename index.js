@@ -8,6 +8,8 @@ app.use('/update', require('./routes/update.js'));
 app.use('/reset', require('./routes/reset.js'));
 app.use('/login', require('./routes/login.js'));
 app.use('/user', require('./routes/user.js'));
+app.use('/admin', require('./routes/admin.js'));
+
 app.use((req,res) => {
     res.status(404)
         .send('This page cannot be found');
