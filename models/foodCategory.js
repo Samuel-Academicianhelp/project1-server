@@ -16,21 +16,13 @@ const config = (hostname) => {
     
     // Declare the field options and constraints
     const requiredString = { type: String, required: true };
-    const optionalString = { type: String, default: '' };
-    const defaultTime = { type: Number, default: Date.now };
-    const falseDefault = { type: Boolean, default: false };
-    const trueDefault = { type: Boolean, default: true };
 
     const userSchema = new Schema({
-        name: { ...requiredString, },
-        slug: { ...requiredString, unique: true },
-        category: optionalString,
-        ingredients: { type: Object, required: true },
-        images: [ String, ],
-        avaliability: trueDefault,
+        category: { ...requiredString, unique: true },
+        food: [ String, ],
     }, { timestamps: true });
 
-    return mongoose.models.food || mongoose.model("food", userSchema);
+    return mongoose.models.category || mongoose.model("category", userSchema);
 };
 
 module.exports = config;
